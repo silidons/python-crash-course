@@ -48,19 +48,73 @@
 #         print(f'Your ticket is $15, you are {age} years old.')
 
 # 7-6 Three Exits
-prompt = "Please provide a number: "
+# prompt = "Please provide a number: "
 
-active = True
-while active:
-    num = input(prompt)
-    if num == 'quit':
-        active = False
-        break
-    try:
-        num = int(num)
-        if num % 10 == 0:
-            print(f'Hey! {num} is a multiple of 10!')
-        else:
-            print(f'Sorry, {num} is not a multiple of 10!')
-    except ValueError:
-        print("Please enter a valid number or 'quit'.")
+# active = True
+# while active:
+#     num = input(prompt)
+#     if num == 'quit':
+#         active = False
+#         break
+#     try:
+#         num = int(num)
+#         if num % 10 == 0:
+#             print(f'Hey! {num} is a multiple of 10!')
+#         else:
+#             print(f'Sorry, {num} is not a multiple of 10!')
+#     except ValueError:
+#         print("Please enter a valid number or 'quit'.")
+
+# 7-8 Deli
+# sandwich_orders = [
+#     'pastrami', 'meatball', 'turkey', 'blt'
+# ]
+# finished_sandwiches = []
+
+# while sandwich_orders:
+#     sandwich = sandwich_orders.pop()
+#     print(f'I made you a {sandwich} sandwhich!')
+#     finished_sandwiches.append(sandwich)
+
+# print(f'\nEach sandwich that was made: ')
+# for sandwich in finished_sandwiches:
+#     print(f'\t{sandwich}!')
+
+# 7-9 No Pastrami
+# sandwich_orders = [
+#     'pastrami', 'meatball', 'turkey', 'blt', 'pastrami', 'pastrami'
+# ]
+
+# finished_sandwiches = []
+
+# print("Uh oh, we ran out of pastrami!!\n")
+
+# while 'pastrami' in sandwich_orders:
+#     sandwich_orders.remove('pastrami')
+
+# while sandwich_orders:
+#     sandwich = sandwich_orders.pop()
+#     print(f'I made you a {sandwich} sandwhich!')
+#     finished_sandwiches.append(sandwich)
+
+# print(f'\nEach sandwich that was made: ')
+# for sandwich in finished_sandwiches:
+#     print(f'\t{sandwich}!')
+
+# 7-10 Dream Vacation
+responses = {}
+
+polling_active = True
+while polling_active:
+    name = input('What is your name?: ')
+    response = input('Where would you like to go on vacation?: ')
+    
+    responses[name] = response
+    
+    repeat = input('(Y)es or (N)o - continue polling others?: ')
+    if repeat == 'no':
+        polling_active = False
+        
+print('---Polling Complete---\n')
+for key, value in responses.items():
+    print(f'{key.title()} would like to go to: {value}')
