@@ -142,12 +142,14 @@
 
 # print(user_profile)
 
-# 8-14 Cars
-def make_car(make, model, **car_info):
-    car_info['make'] = make
-    car_info['model'] = model
-    return car_info
+# # 8-14 Cars
+# def make_car(make, model, **car_info):
+#     car_info['make'] = make
+#     car_info['model'] = model
+#     return car_info
 
-my_car = make_car('Ram', '1500 4x4', color='red', milage=28_000)
+# my_car = make_car('Ram', '1500 4x4', color='red', milage=28_000)
 
-print(my_car)
+# print(my_car)
+
+# 8-15 (see other .py files)
