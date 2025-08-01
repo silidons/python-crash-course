@@ -1,0 +1,4 @@
+In Python you can write stuff
+In Python you can make programs
+In Python you can do loops
+In Python you can be a cool guy
